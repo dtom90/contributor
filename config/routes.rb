@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'contributors/home'
+  root to: 'contributors#home'
 
-  get 'contributors/show'
+  get '/*username', to: 'contributors#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -3,5 +3,6 @@ class ContributorsController < ApplicationController
   end
 
   def show
+    @username = params[:username]
   end
 end
