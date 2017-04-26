@@ -1,2 +1,7 @@
-<h1>Contributors#home</h1>
-<p>Find me in app/views/contributors/home.html.erb</p>
+<h1>Contributors</h1>
+
+<%= form_tag '/contributor', method: 'get' do %>
+    <%= label_tag :username, 'Search for:' %>
+    <%= text_field_tag :username %>
+    <%= submit_tag 'Search' %>
+<% end %>
