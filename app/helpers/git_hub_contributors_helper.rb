@@ -1,0 +1,2 @@
+module GitHubContributorsHelper
+end
