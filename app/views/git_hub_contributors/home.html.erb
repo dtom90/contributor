@@ -1,7 +1,12 @@
-<h1>Contributors</h1>
+<h1>GitHub Contributors</h1>
 
+<div class="col-lg-4">
 <%= form_tag '/contributor', method: 'get' do %>
-    <%= label_tag :username, 'Search for:' %>
-    <%= text_field_tag :username %>
-    <%= submit_tag 'Search' %>
+  <div class="input-group">
+    <%= text_field_tag :username, nil, placeholder: 'Username', class: 'form-control' %>
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">Search</button>
+    </span>
+  </div>
 <% end %>
+</div>

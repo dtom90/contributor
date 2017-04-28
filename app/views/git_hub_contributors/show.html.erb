@@ -1,3 +1,8 @@
+<h4>
+  <%= link_to root_path do %>
+    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+  <% end %>
+</h4>
 <h1>Contributor <%= @username %></h1>
 <h3>
   <%= link_to 'GitHub Profile', "https://github.com/#{@username}", target: '_blank' %>
