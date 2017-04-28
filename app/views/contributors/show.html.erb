@@ -1,1 +1,4 @@
-<h1><%= @username %></h1>
+<h1>Contributor <%= @username %></h1>
+<h3>
+  <%= link_to 'GitHub Profile', "https://github.com/#{@username}", target: '_blank' %>
+</h3>
