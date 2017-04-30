@@ -6,7 +6,7 @@ class GitHubContributorsController < ApplicationController
     user = GitHubContributor.new(username: params[:username])
     if user.valid?
       @username = user.username
-      user.get_profile
+      @profile = user.get_profile
     end
   end
 end

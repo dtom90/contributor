@@ -4,7 +4,8 @@ class GitHubContributor
   validates_presence_of :username
 
   def get_profile
-    response = Faraday.get "https://github.com/#{self.username}"
-    puts response.body
+    profile_url = "https://github.com/#{self.username}"
+    doc = Nokogiri::HTML(open profile_url)
+    doc.css('.js-contribution-graph')[0].to_s
   end
 end

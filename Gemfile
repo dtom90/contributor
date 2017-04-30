@@ -54,4 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
-gem 'faraday', '~>0.12'
+gem 'nokogiri', '~> 1.7'
