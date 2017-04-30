@@ -1,3 +1,149 @@
 // Place all the styles related to the contributors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+contributions-setting .contributions-setting-link {
+  font-size: 13px
+}
+
+.contributions-setting .dropdown-menu {
+  left: -85px;
+  z-index: 80
+}
+
+.contributions-setting .select-menu-modal {
+  width: 330px
+}
+
+.contributions-setting .select-menu-item-text {
+  font-weight: normal
+}
+
+.calendar-graph {
+  height: 126px;
+  padding: 5px 0 0;
+  text-align: center
+}
+
+.calendar-graph.days-selected rect.day {
+  opacity: 0.5
+}
+
+.calendar-graph.days-selected rect.day.active {
+  opacity: 1
+}
+
+.calendar-graph .dots {
+  width: 64px;
+  height: 64px;
+  margin: 20px auto 0
+}
+
+.calendar-graph text.month {
+  font-size: 10px;
+  fill: #767676
+}
+
+.calendar-graph text.wday {
+  font-size: 9px;
+  fill: #767676
+}
+
+.contrib-footer {
+  padding: 0 10px 12px;
+  font-size: 11px
+}
+
+.contrib-legend {
+  float: right
+}
+
+.contrib-legend .legend {
+  position: relative;
+  bottom: -1px;
+  display: inline-block;
+  margin: 0 5px;
+  list-style: none
+}
+
+.contrib-legend .legend li {
+  display: inline-block;
+  width: 10px;
+  height: 10px
+}
+
+.contrib-square {
+  font-size: 22px;
+  line-height: 0.9;
+  color: #cce888
+}
+
+.contribution-activity h2 {
+  margin: 30px 0 15px;
+  font-size: 18px;
+  font-weight: normal
+}
+
+.contribution-activity .select-menu-button {
+  position: relative;
+  top: -4px
+}
+
+.contribution-activity.loading .contribution-activity-listing {
+  display: none
+}
+
+.contribution-activity.loading .contribution-activity-show-more {
+  display: none
+}
+
+.contribution-activity.loading .contribution-activity-spinner {
+  display: block
+}
+
+.contribution-activity-spinner {
+  display: none;
+  width: 64px;
+  height: 64px;
+  margin: 20px auto 0
+}
+
+.contribution-activity-spinner.next {
+  margin: 0 auto
+}
+
+ul.simple-conversation-list a.meta {
+  color: #586069
+}
+
+li.contribution {
+  padding: 10px 0;
+  list-style: none
+}
+
+li.contribution h3 {
+  display: inline-block;
+  margin: 0;
+  font-size: 14px
+}
+
+li.contribution .cmeta {
+  display: block;
+  font-size: 12px
+}
+
+li.contribution .cmt {
+  color: #586069
+}
+
+li.contribution .d {
+  color: #c00
+}
+
+li.contribution .a {
+  color: #8cac29
+}
+
+li.contribution .num {
+  color: #586069
+}
