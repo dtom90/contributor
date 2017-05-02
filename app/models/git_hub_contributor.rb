@@ -6,6 +6,10 @@ class GitHubContributor
   def get_profile
     profile_url = "https://github.com/#{self.username}"
     doc = Nokogiri::HTML(open profile_url)
-    doc.css('.js-contribution-graph')[0].to_s
+    {
+        url: profile_url,
+        avatar: doc.css('img.avatar')[0].to_s,
+        contribution_graph: doc.css('.js-contribution-graph')[0].to_s
+    }
   end
 end

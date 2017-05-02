@@ -2,7 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-contributions-setting .contributions-setting-link {
+.rounded-2 {
+  border-radius: 6px !important
+}
+
+.contributions-setting .contributions-setting-link {
   font-size: 13px
 }
 
