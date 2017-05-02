@@ -1,12 +1,10 @@
 <h1>GitHub Contributors</h1>
 
 <div class="col-lg-4">
-<%= form_tag '/contributor', method: 'get' do %>
-  <div class="input-group">
-    <%= text_field_tag :username, nil, placeholder: 'Username', class: 'form-control' %>
-    <span class="input-group-btn">
-      <button class="btn btn-default" type="button">Search</button>
-    </span>
-  </div>
-<% end %>
+
+  <%= bootstrap_form_for @user, url: '/contributor', method: 'get' do |f| %>
+      <%= f.text_field :username, placeholder: 'GitHub Username' %>
+      <%= f.submit 'Get Contributions'%>
+  <% end %>
+  
 </div>
