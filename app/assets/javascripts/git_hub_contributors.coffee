@@ -5,7 +5,10 @@
 $(document).ready ->
   $('form#new_git_hub_contributor').submit ->
     username = $('input#git_hub_contributor_username').val()
-    window.location.href = "/#{username}"
+    if(username)
+      window.location.href = "/#{username}"
+    else
+      alert('Please enter a valid username')  
     false
   
   $('div.mb-5').addClass('px-3')

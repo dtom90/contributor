@@ -8,7 +8,7 @@ class GitHubContributorsController < ApplicationController
     @user = GitHubContributor.new(git_hub_contributor_params)
     if @user.valid?
       @username = @user.username
-      @profile = @user.github_profile
+      @profile = @user.profile
     else
       render action: 'home'
     end
