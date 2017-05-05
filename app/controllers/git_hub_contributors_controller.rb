@@ -1,13 +1,15 @@
 class GitHubContributorsController < ApplicationController
   def home
-    if git_hub_contributor_params[:username]
+    puts 'home'
+    if params[:username]# and not params[:username].empty?
       show
-      render action: 'show' and return
+      render action: 'show' and return if @user.valid?
     end
     @user = GitHubContributor.new
   end
 
   def show
+    puts 'show'
     @user = GitHubContributor.new(git_hub_contributor_params)
     if @user.valid?
       @username = @user.username

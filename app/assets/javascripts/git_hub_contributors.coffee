@@ -8,7 +8,7 @@ $(document).ready ->
     if(username)
       window.location.href = "/#{username}"
     else
-      alert('Please enter a valid username')  
+      window.location.href = "/?username="  
     false
   
   $('div.mb-5').addClass('px-3')
