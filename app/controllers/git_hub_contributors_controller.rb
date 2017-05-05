@@ -15,6 +15,6 @@ class GitHubContributorsController < ApplicationController
   end
 
   def git_hub_contributor_params
-    params.require(:git_hub_contributor).permit(:username)
+    params.permit(:username)
   end
 end

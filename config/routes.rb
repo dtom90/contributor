@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'git_hub_contributors#home'
 
-  get '/contributor', to: 'git_hub_contributors#show'
+  get '/contributor', to: 'git_hub_contributors#show', as: 'git_hub_contributor'
+  resources :git_hub_contributors, only: [:index, :show], path: 'contributor'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
