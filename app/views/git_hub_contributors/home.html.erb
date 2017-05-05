@@ -2,13 +2,9 @@
 
 <div class="col-lg-4">
 
-  <%= bootstrap_form_tag url: '/contributor', method: 'get' do |f| %>
-      <%= f.text_field :username, placeholder: 'GitHub Username' %>
-      <%= f.submit 'Get Contributions'%>
-  <% end %>
-  <br>
   <%= bootstrap_form_for @user do |f| %>
-    <%= f.alert_message 'Error while looking up that profile:' %>
+      <%= f.text_field :username, placeholder: 'GitHub Username' %>
+      <%= f.primary 'Get Contributions'%>
   <% end %>
   
 </div>
