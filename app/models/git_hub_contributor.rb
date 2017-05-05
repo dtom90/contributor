@@ -10,7 +10,6 @@ class GitHubContributor
   def github_profile
     profile_url = "https://github.com/#{self.username}"
     begin
-      puts "opening #{profile_url}..."
       doc = Nokogiri::HTML(open profile_url)
       @profile = {
           url: profile_url,
