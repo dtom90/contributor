@@ -11,10 +11,15 @@ class GitHubContributor
     profile_url = "https://github.com/#{self.username}"
     begin
       doc = Nokogiri::HTML(open profile_url)
+      contributions = {}
+      doc.css('rect.day').each do |day|
+        contributions[day['data-date']] = day['data-count']
+      end
       @profile = {
           url: profile_url,
           avatar: doc.css('img.avatar')[0].to_s,
-          contribution_graph: doc.css('.js-contribution-graph')[0].to_s
+          contribution_graph: doc.css('.js-contribution-graph')[0].to_s,
+          contributions: contributions
       }
     rescue OpenURI::HTTPError => e
       errors.add :username, "Couldn't find a GitHub profile for this username."

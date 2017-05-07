@@ -10,8 +10,15 @@ class GitHubContributorsController < ApplicationController
   def show
     @user = GitHubContributor.new(git_hub_contributor_params)
     if @user.valid?
-      @username = @user.username
-      @profile = @user.profile
+      respond_to do |format|
+        format.html {
+          @username = @user.username
+          @profile = @user.profile
+        }
+        format.json { 
+          render json: { @user.username => @user.profile[:contributions] }
+        }
+      end
     else
       render action: 'home'
     end
