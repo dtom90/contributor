@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.text-normal {
+  font-weight: normal !important;
+}
+
+.f4 {
+  font-size: 16px !important;
+}
+
 .rounded-2 {
   border-radius: 6px !important
 }
@@ -39,6 +47,10 @@
 .px-3 {
   padding-right: 16px !important;
   padding-left: 16px !important
+}
+
+.mb-2 {
+  margin-bottom: 8px !important;
 }
 
 .mb-5 {
