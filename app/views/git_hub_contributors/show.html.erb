@@ -11,10 +11,14 @@
 <div class="col-9 float-left pl-2">
   
   <%= @profile[:contribution_graph].html_safe %>
+
+  <h2 class="f4 text-normal mb-2">
+    Contribution Statistics
+  </h2>
   <table class="table table-bordered">
-    <tr><th></th><th>Average</th><th>Total</th></tr>
-    <tr><td>Last 7 days</td><td><%= (@profile[:last_week_total].to_f/7).round(1) %></td><td><%= @profile[:last_week_total] %></td></tr>
-    <tr><td>Last 30 days</td><td><%= (@profile[:last_month_total].to_f/30).round(1) %></td><td><%= @profile[:last_month_total] %></td></tr>
-    <tr><td>Last <%= @profile[:total_days] %> days</td><td><%= (@profile[:last_year_total].to_f/@profile[:total_days]).round(1) %></td><td><%= @profile[:last_year_total] %></td></tr>
+    <tr><th>Time Period</th><th>Total</th><th>Average</th></tr>
+    <tr><td>Last 7 days</td><td><%= @profile[:last_week_total] %></td><td><%= (@profile[:last_week_total].to_f/7).round(1) %></td></tr>
+    <tr><td>Last 30 days</td><td><%= @profile[:last_month_total] %></td><td><%= (@profile[:last_month_total].to_f/30).round(1) %></td></tr>
+    <tr><td>Last <%= @profile[:total_days] %> days</td><td><%= @profile[:last_year_total] %></td><td><%= (@profile[:last_year_total].to_f/@profile[:total_days]).round(1) %></td></tr>
   </table>
 </div>
