@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  $('form#new_git_hub_contributor').submit ->
-    username = $('input#git_hub_contributor_username').val()
+  $('form#new_contributor').submit ->
+    username = $('input#contributor_username').val()
     if(username)
       window.location.href = "/#{username}"
     else

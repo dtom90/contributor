@@ -1,4 +1,4 @@
-class GitHubContributor
+class Contributor
   include ActiveModel::Model
   
   attr_accessor :username
