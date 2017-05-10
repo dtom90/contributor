@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'GitHub Contributor Searches', type: :feature, js: true do
+  
   before(:each) do
     visit '/'
   end
