@@ -3,7 +3,7 @@ require_relative 'boot'
 # require 'rails/all'
 
 # active_record is what we're not going to use it, so comment it "just in case"
-# require "active_record/railtie" 
+# require "active_record/railtie"
 
 # This is not loaded in rails/all but inside active_record so add it if
 # you want your models work as expected
