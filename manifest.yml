@@ -3,4 +3,3 @@ applications:
 - name: github-contributor-dev
   buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
   memory: 128MB
-  command: bundle exec rails s -p $PORT
