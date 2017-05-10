@@ -98,3 +98,12 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+RSpec.shared_context 'html page', shared_context: :metadata do
+  def check_consistent_content
+    expect(page).to have_content 'View Source on GitHub'
+    expect(page).to have_link href: 'https://github.com/dtom90/github-contributor'
+    expect(page).to have_content 'GitHub Contributor'
+    'present'
+  end
+end

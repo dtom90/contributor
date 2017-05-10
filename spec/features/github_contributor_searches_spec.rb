@@ -5,9 +5,11 @@ RSpec.feature 'GitHub Contributor Searches', type: :feature, js: true do
   before(:each) do
     visit '/'
   end
+
+  include_context 'html page'
   
   scenario 'User visits the home page' do
-    expect(page).to have_content 'GitHub Contributor'
+    expect(check_consistent_content).to eq 'present'
     expect(page).to have_content 'Username'
     expect(page).to have_button 'Get Contributions'
   end
@@ -26,7 +28,8 @@ RSpec.feature 'GitHub Contributor Searches', type: :feature, js: true do
   scenario 'User tries to get contributions from dtom90' do
     fill_in 'contributor_username', with: 'dtom90'
     click_button 'Get Contributions'
-    expect(page).to have_text 'Contributor dtom90'
+    expect(check_consistent_content).to eq 'present'
+    expect(page).to have_text 'dtom90'
     expect(page).to have_text 'contributions in the last year'
     expect(page).to have_text 'Contribution Statistics'
   end
