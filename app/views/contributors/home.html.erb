@@ -1,10 +1,10 @@
 <h1>GitHub Contributor</h1>
-
+<br>
 <div class="col-lg-4">
 
   <%= bootstrap_form_for @user do |f| %>
-      <%= f.text_field :username, placeholder: 'GitHub Username' %>
+      <%= f.text_field :username, placeholder: 'GitHub Username ( e.g. octocat )', hide_label: true %>
       <%= f.primary 'Get Contributions'%>
   <% end %>
-  
+
 </div>
