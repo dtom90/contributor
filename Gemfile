@@ -41,6 +41,8 @@ group :development, :test do
   gem 'poltergeist'
   gem 'selenium-webdriver'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-livereload'
 end
 
 group :development do
