@@ -12,6 +12,7 @@ RSpec.feature 'GitHub Contributor Searches', type: :feature, js: true do
     expect(check_consistent_content).to eq 'present'
     expect(page).to have_content 'Username'
     expect(page).to have_button 'Get Contributions'
+    expect(page).to have_css "meta[name='viewport'][content='width=device-width, initial-scale=1']", visible: false
   end
   
   scenario 'User tries to get contributions with a blank username' do
