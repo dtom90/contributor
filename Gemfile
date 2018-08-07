@@ -60,6 +60,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap_form'
 
-gem 'nokogiri', '~> 1.7'
+gem 'nokogiri', '~> 1.8.2'
 
 gem 'chartkick'
