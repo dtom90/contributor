@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Contributor
   include ActiveModel::Model
   
@@ -23,7 +25,7 @@ class Contributor
       
       @profile = {
           url: profile_url,
-          avatar: doc.css('img.avatar')[0].to_s,
+          avatar: doc.css('img.avatar')[1].to_s,
           contribution_graph: doc.css('.js-contribution-graph')[0].to_s,
           contributions: contributions,
           last_week_total: last_week_total,
@@ -31,7 +33,7 @@ class Contributor
           last_year_total: last_year_total,
           total_days: contributions.keys.length
       }
-    rescue OpenURI::HTTPError => e
+    rescue OpenURI::HTTPError
       errors.add :username, "Couldn't find a GitHub profile for this username."
     end
   end
