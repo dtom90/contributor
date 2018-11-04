@@ -26,7 +26,7 @@ class Contributor
       @profile = {
           url: profile_url,
           avatar: doc.css('img.avatar')[1].to_s,
-          contribution_graph: doc.css('.js-contribution-graph')[0].to_s,
+          contribution_graph: doc.css('.js-yearly-contributions')[0].to_s,
           contributions: contributions,
           last_week_total: last_week_total,
           last_month_total: last_month_total,
